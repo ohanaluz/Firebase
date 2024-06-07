@@ -1,0 +1,120 @@
+<div class="container text-center">
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div class="col bg-primary">
+            <nav class="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">SISTEMA WEB</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="/">Cadastrar</a>
+                            <a class="nav-link" href="/consulta">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div class="col bg-white">
+            &nbsp;
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div class="col bg-white">
+            <p class="text-start fs-5">Cadastrar - Agendamento de Potenciais Clientes</p>
+            <p class="text-start fs-6">Sistema Utilizado para agendamento de serviços.</p>
+            <p>
+            <div class="container text-center">
+                <div class="row bg-primary">
+                    <div class="col text-light">
+                        Nome
+                    </div>
+                    <div class="col text-light">
+                        Telefone
+                    </div>
+                    <div class="col text-light">
+                        Origem
+                    </div>
+                    <div class="col text-light">
+                        Data de Contato
+                    </div>
+                    <div class="col text-light">
+                        Observação
+                    </div>
+                    <div class="col text-light">
+                        Ações
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-light">
+                        &nbsp;
+                    </div>
+                    <div class="col text-light">
+                        &nbsp;
+                    </div>
+                    <div class="col text-light">
+                        &nbsp;
+                    </div>
+                    <div class="col text-light">
+                        &nbsp;
+                    </div>
+                    <div class="col text-light">
+                        &nbsp;
+                    </div>
+                    <div class="col text-light">
+                        &nbsp;
+                    </div>
+                </div>
+                {{#each dados}}
+                    
+                    <div class="row">
+                        <div class="col">
+                            {{this.nome}}
+                        </div>
+                        <div class="col">
+                            {{telefone}}
+                        </div>
+                        <div class="col">
+                            {{this.origem}}
+                        </div>
+                        <div class="col">
+                            {{this.data_contato}}
+                        </div>
+                        <div class="col">
+                            {{this.observacao}}
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-primary"><a href="/editar/{{this.id}}" style="color:inherit">Editar</a></button>
+                            <button type="button" class="btn btn-primary"><a href="/excluir/{{this.id}}" style="color:inherit">Excluir</a></button>
+                        </div>
+                    </div>
+                    
+                {{/each}}
+            </div>
+            </p>
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+</div>
